@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import {TableContainer, Paper} from '@material-ui/core';
-import classes from '*.module.css';
+import {TableContainer, Table, TableRow, TableCell, Paper} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  table: {
+    minWidth: 650,
+  },
+});
 
 export default function MyComponent() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-
+  const classes = useStyles();
   // Note: the empty deps array [] means
   // this useEffect will run once
   // similar to componentDidMount()
@@ -36,20 +42,21 @@ export default function MyComponent() {
     return (
       <div>
         <TableContainer component={Paper}>
-          <Table className={classes.table} aria-label="simple table"></Table>
-        </TableContainer>
-        <table>
-          <tr>
-            <td>a</td>
-            <td>b</td>
-          </tr>
+          <Table className={classes.table} aria-label="simple table">
+            <TableRow>
+              <TableCell>Date</TableCell>
+              <TableCell>State</TableCell>
+              <TableCell>Positives</TableCell>
+            </TableRow>
           {items.map(item => (
-            <tr key={item.date}>
-              <td>{item.state}</td>
-              <td>{item.positive}</td>
-            </tr>
+            <TableRow>
+              <TableCell>{item.date}</TableCell>
+              <TableCell>{item.state}</TableCell>
+              <TableCell>{item.positive}</TableCell>
+            </TableRow>
           ))}
-        </table>
+          </Table>
+        </TableContainer>
       </div>
 
     );
