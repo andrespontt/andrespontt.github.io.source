@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import {TableContainer, Table, TableRow, TableCell, Paper} from '@material-ui/core';
-import {makeStyles} from '@material-ui/core/styles';
+import { TableContainer, Table, TableRow, TableCell, TableBody, TableHead, Paper } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import MaterialTable from 'material-table';
 
 const useStyles = makeStyles({
   table: {
-    minWidth: 650,
+    minWidth: 200,
   },
 });
 
@@ -41,20 +42,27 @@ export default function MyComponent() {
   } else {
     return (
       <div>
+        <MaterialTable>
+          
+        </MaterialTable>
         <TableContainer component={Paper}>
           <Table className={classes.table} aria-label="simple table">
-            <TableRow>
-              <TableCell>Date</TableCell>
-              <TableCell>State</TableCell>
-              <TableCell>Positives</TableCell>
-            </TableRow>
-          {items.map(item => (
-            <TableRow>
-              <TableCell>{item.date}</TableCell>
-              <TableCell>{item.state}</TableCell>
-              <TableCell>{item.positive}</TableCell>
-            </TableRow>
-          ))}
+            <TableHead>
+              <TableRow>
+                <TableCell>Date</TableCell>
+                <TableCell>State</TableCell>
+                <TableCell>Positives</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {items.map(item => (
+                <TableRow>
+                  <TableCell>{item.date}</TableCell>
+                  <TableCell>{item.state}</TableCell>
+                  <TableCell>{item.positive}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
           </Table>
         </TableContainer>
       </div>

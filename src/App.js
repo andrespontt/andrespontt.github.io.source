@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import CovidDashboard from './CovidDashboard';
-import { Typography, Link, Container, Box, createMuiTheme, CssBaseline } from '@material-ui/core';
+import { Typography, Link, createMuiTheme, CssBaseline } from '@material-ui/core';
 import { ThemeProvider } from "@material-ui/styles";
+import Dashboard from './Dashboard';
 
 function Copyright() {
   return (
@@ -26,12 +26,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="sm">
-        <Box my={4}>
-          <CovidDashboard />
-        </Box>
-        <Copyright />
-      </Container>
+      <Dashboard />
+      <Copyright />
     </ThemeProvider>
   );
 }
