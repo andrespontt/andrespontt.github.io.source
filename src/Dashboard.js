@@ -28,6 +28,9 @@ export default function Dashboard() {
             title="Active Cases"
             columns={columns}
             data={data}
+            options={{
+                pageSize: 8
+            }}
         />
     );
 }
