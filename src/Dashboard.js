@@ -25,7 +25,7 @@ export default function Dashboard() {
 
     return (
         <MaterialTable
-            title="Covid"
+            title="C19"
             columns={columns}
             data={data}
             options={{
