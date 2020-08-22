@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Typography, Link, createMuiTheme, CssBaseline } from '@material-ui/core';
+import { Typography, Link, createMuiTheme, CssBaseline, Container } from '@material-ui/core';
 import { ThemeProvider } from "@material-ui/styles";
 import Dashboard from './Dashboard';
 
@@ -22,12 +22,15 @@ const theme = createMuiTheme({
 });
 
 function App() {
-
   return (
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Dashboard />
-      <Copyright />
+      <Container maxWidt={false}>
+          <CssBaseline />
+          <Dashboard />
+          <Copyright />
+        
+        
+      </Container>
     </ThemeProvider>
   );
 }
