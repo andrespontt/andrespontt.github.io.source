@@ -37,7 +37,7 @@ export default function Dashboard() {
     return (
         <div className={classes.root}>
             <MaterialTable
-            title="C19"
+            title="C19 - v2"
             columns={columns}
             data={data}
             options={{
