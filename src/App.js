@@ -24,7 +24,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidt={false}>
+      <Container maxWidth={false}>
           <CssBaseline />
           <Dashboard />
           <Copyright />
