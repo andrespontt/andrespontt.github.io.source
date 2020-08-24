@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import { Typography, Link, createMuiTheme, CssBaseline, Container, AppBar, Toolbar, makeStyles, IconButton } from '@material-ui/core';
+import { Typography, Link, createMuiTheme, CssBaseline, Container, AppBar, Toolbar, makeStyles, IconButton, Card, Paper } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu'
 import { ThemeProvider } from "@material-ui/styles";
-import Dashboard from './Dashboard';
+import UsaDashboard from './UsaDashboard';
 
 function Copyright() {
   return (
@@ -16,7 +16,7 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles(theme=>({
+const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
@@ -27,6 +27,7 @@ const useStyles = makeStyles(theme=>({
     flexGrow: 1
   }
 }))
+
 
 function ButtonAppBar() {
   const classes = useStyles();
@@ -55,14 +56,52 @@ const theme = createMuiTheme({
   }
 });
 
+
+function Summary() {
+  const useStyles = makeStyles((theme) => ({
+    root: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      '& > *': { 
+        marginRight: theme.spacing(2),
+        width: theme.spacing(16),
+        height: theme.spacing(16),
+      },
+    },
+  }));
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Paper elevation={3}>
+        Total cases:
+        4000
+      </Paper>
+      <Paper elevation={3}>
+        Total cases:
+        4000
+      </Paper>
+      <Paper elevation={3}>
+        Total cases:
+        4000
+      </Paper>
+      <Paper elevation={3}>
+        Total cases:
+        4000
+      </Paper>
+    </div>
+  );
+}
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth={false}>
         <ButtonAppBar />
-          <Dashboard />
-      
+        <Summary />
+        <UsaDashboard />
+
         <Copyright />
       </Container>
     </ThemeProvider>

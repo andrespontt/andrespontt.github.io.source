@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import MaterialTable from 'material-table';
 import { makeStyles } from '@material-ui/core/styles';
 
-export default function Dashboard() {
+export default function UsaDashboard() {
 
     const [columns] = useState(
         [
@@ -21,6 +21,11 @@ export default function Dashboard() {
         .then(res => res.json())
         .then((result) => {
             setData(result);
+        })
+        fetch("http://ip-api.com/json")
+        .then(res =>res.json())
+        .then((result) => {
+            console.log("ip-api: " + result.region)
         })
     },[]);
 
