@@ -4,6 +4,7 @@ import { Typography, Link, createMuiTheme, CssBaseline, Container, AppBar, Toolb
 import MenuIcon from '@material-ui/icons/Menu'
 import { ThemeProvider } from "@material-ui/styles";
 import UsaDashboard from './UsaDashboard';
+import SummaryGrid from './components/SummaryGrid';
 
 function Copyright() {
   return (
@@ -93,13 +94,14 @@ function Summary() {
   );
 }
 
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth={false}>
         <ButtonAppBar />
-        <Summary />
+        <SummaryGrid />
         <UsaDashboard />
 
         <Copyright />
