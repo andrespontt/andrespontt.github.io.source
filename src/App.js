@@ -41,7 +41,7 @@ function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title} >
-            Dashboard
+            Dashboard - last update: 08/29
           </Typography>
         </Toolbar>
       </AppBar>
