@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
         padding: theme.spacing(4),
+        margin: 2,
         textAlign: 'center',
         color: theme.palette.text.secondary
     }
@@ -20,10 +21,10 @@ const classes = useStyles();
     function FormRow() {
         return (
             <Fragment>
-                <Grid item xs={6}>
+                <Grid item xs={12}>
                     <Paper className={classes.paper}>Total US: 33.342</Paper>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12}>
                     <Paper className={classes.paper}>Total US: 33.333</Paper>
                 </Grid>
             </Fragment>
