@@ -19,4 +19,4 @@ jobs:
       run: yarn install
     - name: Deploy to GH Pages
       run: |
-        yarn install
+        yarn build
