@@ -6,7 +6,7 @@ import UsaDashboard from './components/UsaDashboard';
 import SummaryGrid from './components/SummaryGrid';
 import { Switch, Route, Link, BrowserRouter as Router } from "react-router-dom";
 import MyComponent from './components/CovidDashboard';
-import ButtonAppBar from './ButtonAppBar';
+import ButtonAppBar from './components/ButtonAppBar';
 import grey from '@material-ui/core/colors/grey';
 
 function Copyright() {
