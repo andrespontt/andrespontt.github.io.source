@@ -46,7 +46,7 @@ export default function UsaDashboard() {
             columns={columns}
             data={data}
             options={{
-                pageSize: 8
+                pageSize: 5
             }}
         />
         </div>
