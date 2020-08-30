@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme) => ({
     },
     paper: {
         padding: theme.spacing(4),
-        margin: 2,
+        marginTop: 1,
+        marginBottom: 1,
         textAlign: 'center',
         color: theme.palette.text.secondary
     }
