@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
-import { Typography, Link, createMuiTheme, CssBaseline, Container, AppBar, Toolbar, makeStyles, IconButton, Card, Paper } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu'
+import { Typography, Link, createMuiTheme, CssBaseline, Container, makeStyles } from '@material-ui/core';
 import { ThemeProvider } from "@material-ui/styles";
 import UsaDashboard from './UsaDashboard';
 import SummaryGrid from './components/SummaryGrid';
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import MyComponent from './CovidDashboard';
+import ButtonAppBar from './ButtonAppBar';
 
 function Copyright() {
   return (
@@ -17,7 +19,7 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles(theme => ({
+export const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
@@ -30,84 +32,35 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-function ButtonAppBar() {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton edge="start" className={classes.menuBUtton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title} >
-            Dashboard
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
-
-}
-
-
 const theme = createMuiTheme({
   palette: {
     type: "dark"
   }
 });
 
-
-function Summary() {
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      '& > *': { 
-        marginRight: theme.spacing(2),
-        width: theme.spacing(16),
-        height: theme.spacing(16),
-      },
-    },
-  }));
-  const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-      <Paper elevation={3}>
-        Total cases:
-        4000
-      </Paper>
-      <Paper elevation={3}>
-        Total cases:
-        4000
-      </Paper>
-      <Paper elevation={3}>
-        Total cases:
-        4000
-      </Paper>
-      <Paper elevation={3}>
-        Total cases:
-        4000
-      </Paper>
-    </div>
-  );
-}
-
-
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Container maxWidth={false}>
-        <ButtonAppBar />
-        <SummaryGrid />
-        <UsaDashboard />
-
-        <Copyright />
-      </Container>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Container maxWidth={false}>
+          <ButtonAppBar />
+          <SummaryGrid />
+          <UsaDashboard />
+          <Switch >
+            <Route path="/">
+              <MyComponent />
+            </Route>
+            <Route path="/c19">
+              <UsaDashboard />
+            </Route>
+          </Switch>
+          <Copyright />
+        </Container>
+      </ThemeProvider>
+    </Router>
   );
 }
+
 
 export default App;
