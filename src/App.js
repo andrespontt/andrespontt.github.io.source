@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import { Typography, Link, createMuiTheme, CssBaseline, Container, makeStyles } from '@material-ui/core';
+import { Typography, createMuiTheme, CssBaseline, Container, makeStyles } from '@material-ui/core';
 import { ThemeProvider } from "@material-ui/styles";
-import UsaDashboard from './UsaDashboard';
+import UsaDashboard from './components/UsaDashboard';
 import SummaryGrid from './components/SummaryGrid';
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import MyComponent from './CovidDashboard';
+import { Switch, Route, Link, BrowserRouter as Router } from "react-router-dom";
+import MyComponent from './components/CovidDashboard';
 import ButtonAppBar from './ButtonAppBar';
+import grey from '@material-ui/core/colors/grey';
 
 function Copyright() {
   return (
@@ -23,7 +24,7 @@ export const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
-  menuBUtton: {
+  menuButton: {
     marginRight: theme.spacing(2)
   },
   title: {
@@ -34,7 +35,10 @@ export const useStyles = makeStyles(theme => ({
 
 const theme = createMuiTheme({
   palette: {
-    type: "dark"
+    type: "dark",
+    primary: {
+      main: grey[900]
+    }
   }
 });
 
@@ -46,13 +50,12 @@ function App() {
         <Container maxWidth={false}>
           <ButtonAppBar />
           <SummaryGrid />
-          <UsaDashboard />
           <Switch >
-            <Route path="/">
-              <MyComponent />
-            </Route>
-            <Route path="/c19">
+            <Route exact path="/">
               <UsaDashboard />
+            </Route>
+            <Route path="/c19/">
+              <MyComponent/>
             </Route>
           </Switch>
           <Copyright />
