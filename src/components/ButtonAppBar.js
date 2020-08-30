@@ -12,7 +12,7 @@ export default function ButtonAppBar() {
         <Toolbar>
           <IconButton edge="start" className={classes.menuBUtton} color="inherit" aria-label="menu">
             <MenuIcon />
-          </IconButton>1»
+          </IconButton>
           <Typography variant="h6" className={classes.title}>
             Dashboard
           </Typography>
