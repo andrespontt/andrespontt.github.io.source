@@ -3,11 +3,10 @@ import './App.css';
 import { Typography, createMuiTheme, CssBaseline, Container, makeStyles } from '@material-ui/core';
 import { ThemeProvider } from "@material-ui/styles";
 import UsaDashboard from './components/UsaDashboard';
-import SummaryGrid from './components/SummaryGrid';
 import { Switch, Route, Link, BrowserRouter as Router } from "react-router-dom";
-import MyComponent from './components/CovidDashboard';
 import ButtonAppBar from './components/ButtonAppBar';
 import grey from '@material-ui/core/colors/grey';
+import Podomoro from './components/Pomodoro';
 
 function Copyright() {
   return (
@@ -49,13 +48,12 @@ function App() {
         <CssBaseline />
         <Container maxWidth={false}>
           <ButtonAppBar />
-          <SummaryGrid />
           <Switch >
             <Route exact path="/">
-              <UsaDashboard />
+              <Podomoro />
             </Route>
             <Route path="/c19/">
-              <MyComponent/>
+              <UsaDashboard/>
             </Route>
           </Switch>
           <Copyright />

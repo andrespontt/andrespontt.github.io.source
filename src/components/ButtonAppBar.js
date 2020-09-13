@@ -14,7 +14,7 @@ export default function ButtonAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Dashboard
+            
           </Typography>
         </Toolbar>
       </AppBar>
