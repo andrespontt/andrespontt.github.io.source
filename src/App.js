@@ -11,7 +11,7 @@ import Podomoro from './components/Pomodoro';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'MIT License © '}
+      {'MIT License © - Andres Pontt'}
       <Link color="inherit" href="https://material-ui.com" />
       {new Date().getFullYear()}
       {'.'}
