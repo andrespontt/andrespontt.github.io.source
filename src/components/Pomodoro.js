@@ -26,7 +26,7 @@ export default function Podomoro() {
 
                 />
                     <Typography gutterBottom align="center" variant="h1" component="h1">
-                        25:00
+                        26:00
                     </Typography>
                 
             </CardActionArea>
