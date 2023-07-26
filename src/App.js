@@ -50,7 +50,7 @@ function App() {
           <ButtonAppBar />
           <Switch >
             <Route exact path="/">
-              <Podomoro />
+              <UsaDashboard />
             </Route>
             <Route path="/c19/">
               <UsaDashboard/>
