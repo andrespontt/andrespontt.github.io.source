@@ -7,6 +7,7 @@ import { Switch, Route, Link, BrowserRouter as Router } from "react-router-dom";
 import ButtonAppBar from './components/ButtonAppBar';
 import grey from '@material-ui/core/colors/grey';
 import Podomoro from './components/Pomodoro';
+import ResumeSummary from './components/ResumeSummary';
 
 function Copyright() {
   return (
@@ -50,7 +51,7 @@ function App() {
           <ButtonAppBar />
           <Switch >
             <Route exact path="/">
-              <UsaDashboard />
+              <ResumeSummary />
             </Route>
             <Route path="/c19/">
               <UsaDashboard/>
