@@ -56,6 +56,9 @@ function App() {
             <Route path="/c19/">
               <UsaDashboard/>
             </Route>
+            <Route path="/pomodoro/">
+              <Podomoro />
+            </Route>
           </Switch>
           <Copyright />
         </Container>
