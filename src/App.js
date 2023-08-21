@@ -12,7 +12,7 @@ import ResumeSummary from './components/ResumeSummary';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'MIT License © - Andres Pontt'}
+      {'MIT License © - Andres Pontt '}
       <Link color="inherit" href="https://material-ui.com" />
       {new Date().getFullYear()}
       {'.'}
