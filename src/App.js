@@ -48,7 +48,6 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Container maxWidth={false}>
-          <ButtonAppBar />
           <Switch >
             <Route exact path="/">
               <ResumeSummary />
