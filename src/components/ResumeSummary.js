@@ -18,7 +18,6 @@ const ResumeSummary = () => {
           <li>Project Planning & Execution</li>
           <li>Client Relationship Management</li>
           <li>Code Review & Quality Assurance</li>
-          <li>UI/UX Design & Development</li>
           <li>Problem-solving & Decision Making</li>
         </ul>
       </div>

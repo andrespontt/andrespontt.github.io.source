@@ -12,7 +12,7 @@ import ResumeSummary from './components/ResumeSummary';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'MIT License © - Andres Pontt'}
+      {'MIT License © - Andres Pontt '}
       <Link color="inherit" href="https://material-ui.com" />
       {new Date().getFullYear()}
       {'.'}
@@ -48,13 +48,15 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Container maxWidth={false}>
-          <ButtonAppBar />
           <Switch >
             <Route exact path="/">
               <ResumeSummary />
             </Route>
             <Route path="/c19/">
               <UsaDashboard/>
+            </Route>
+            <Route path="/pomodoro/">
+              <Podomoro />
             </Route>
           </Switch>
           <Copyright />
