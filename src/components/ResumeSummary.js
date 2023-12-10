@@ -6,7 +6,7 @@ const ResumeSummary = () => {
       <h1>Andres Pontt</h1>
       <h3>Technical Lead Software Engineer & Manager</h3>
       <p>
-        Results-driven and highly skilled Technical Lead with 14 years of experience in software development and team management. Proven expertise in building and leading high-performing engineering teams, delivering successful projects, and driving innovation. Proficient in ReactJS, JavaScript, Node.js, and various software development methodologies. A strategic thinker with a strong focus on delivering business value through technology solutions.
+        Results-driven and highly skilled Technical Lead with 14 years of experience in software development and team management. Proven expertise in building and leading high-performing engineering teams, delivering successful projects, and driving innovation. Proficient in Java, JavaScript, Node.js, and various software development methodologies. A strategic thinker with a strong focus on delivering business value through technology solutions.
       </p>
       <div className="resume-skills">
         <h4>Key Skills:</h4>
