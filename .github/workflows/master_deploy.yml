@@ -6,8 +6,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     strategy:
       matrix:
         node-version: [12.x]
@@ -19,9 +17,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install Packages
       run: yarn install
+    - name: Build
+      run: yarn build
     - name: Deploy to GH Pages
-      run: |
-        git config --global user.email "${{ secrets.GIT_EMAIL }}"
-        git config --global user.name "${{ secrets.GIT_USERNAME }}"
-        git remote set-url origin https://${{ secrets.GH_TOKEN }}@github.com/andrespontt.github.io.git
-        npm run deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build

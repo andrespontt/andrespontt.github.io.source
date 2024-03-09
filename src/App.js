@@ -4,7 +4,6 @@ import { Typography, createMuiTheme, CssBaseline, Container, makeStyles } from '
 import { ThemeProvider } from "@material-ui/styles";
 import UsaDashboard from './components/UsaDashboard';
 import { Switch, Route, Link, BrowserRouter as Router } from "react-router-dom";
-import ButtonAppBar from './components/ButtonAppBar';
 import grey from '@material-ui/core/colors/grey';
 import Podomoro from './components/Pomodoro';
 import ResumeSummary from './components/ResumeSummary';
